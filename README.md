@@ -14,14 +14,13 @@
 
 Our goal was to predict **Number of Days until Payment** feature by training a Machine Learning model on the Data given.
 
-## Approach used:
 ### Data Preprocessing:
 1. Replace Nan Values with Empty Strings in the Description
 2. Text Preprocessing on Description Text: list of stop list of 25 semantically non-selective words were taken from list used by Stanford NLP Group which are common in Reuters-RCV1.
 3. Count Vectorizer to numerically encode text features: It is great tool which is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text
 4. Converted Dates into Date-Time Format: We noticed that dataset had various columns which corresponded to dates like Created, Invoice date etc. But these columns were in string format so we split them into day, date, weekday, month and year to improve inference.
 
-### Feature Engineering:
+### Feature Engineering
 1. **Due_Invoice_delta** - difference between the due date and invoice date
 2. As the “Outstanding” column was mostly zero, we made a new feature called “**Outstanding_zero**” which was 1 if the column was zero and 0 otherwise.
 3. We had three continuous numerical columns : [**“Outstanding:, “Amount”, “Settled”**]. We took ratios of these three columns to create three new features.
@@ -33,7 +32,7 @@ Our goal was to predict **Number of Days until Payment** feature by training a M
 3. Reduces overfitting when constructing your models with a novel gradient-boosting scheme.
 4. We used 5-Fold Cross Validation on our model to evaluate our model.
 
-### Other Approachers we tried:
+### Other Approachers we tried
 1. Classical Neural Network with one hot encoding for the categorical features.
 2. Decision Trees
 3. StackingRegressor by stacking DecisionTree, XGB, CatBoost and RandomForest but CatBoost alone outperformed them.
