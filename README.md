@@ -1,4 +1,4 @@
-# Cassandra
+# Cassandra'22
 
 ## The task was to build a machine learning model that helps estimate when an invoice will be paid. The estimation doesn't have to be an exact date and time, a rough estimation in terms of days is sufficient for this task.
 ## Data Description
