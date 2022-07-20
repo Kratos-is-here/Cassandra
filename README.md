@@ -33,6 +33,12 @@ Our goal was to predict Number of Days until Payment feature by training a Machi
 3. Reduces overfitting when constructing your models with a novel gradient-boosting scheme.
 4. We used 5-Fold Cross Validation on our model to evaluate our model.
 
+### Other Approachers we tried:
+1. Classical Neural Network with one hot encoding for the categorical features.
+2. Decision Trees
+3. StackingRegressor by stacking DecisionTree, XGB, CatBoost and RandomForest but CatBoost alone outperformed them.
+
+
 [Presentation slides explaining our approach](https://www.canva.com/design/DAE9kvzlI1c/FKcPR9OgjUXJzkgQlmdnLg/view?utm_content=DAE9kvzlI1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 [Competition Link](https://www.kaggle.com/competitions/cassandra-udyam-2022/leaderboard)
