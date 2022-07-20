@@ -17,8 +17,6 @@ for this task. You need to predict the Number of Days until Payment using the Da
 
 Our goal was to predict Number of Days until Payment feature by training a Machine Learning model on the Data given.
 
-We used the catboost library for using gradient boosting decision trees
-
 [Presentation slides explaining our approach](https://www.canva.com/design/DAE9kvzlI1c/FKcPR9OgjUXJzkgQlmdnLg/view?utm_content=DAE9kvzlI1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 [Competition Link](https://www.kaggle.com/competitions/cassandra-udyam-2022/leaderboard)
