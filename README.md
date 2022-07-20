@@ -1,6 +1,6 @@
 # Cassandra
 
-## Ultimately, the task was to build a model that helps estimating when an invoice will be paid. The estimation doesn't have to be an exact date and time, a rough estimation in terms of days is sufficient for this task. You need to predict the Number of Days until Payment using the Dataset provided to you.
+## The task was to build a model that helps estimating when an invoice will be paid. The estimation doesn't have to be an exact date and time, a rough estimation in terms of days is sufficient for this task.
 
 - Description : The textual description entered by the user during recording the invoice on the accounting system (string).
 - Vendor Name : The name of the vendor/supplier who provided the goods or services (string).
