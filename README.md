@@ -12,7 +12,7 @@
 - Outstanding : The unpaid part of the invoice in which Traxes is required to pay (float)
 - Number of Days until Payment : count of days after Invoice Date after which payment was made.
 
-Our goal was to predict Number of Days until Payment feature by training a Machine Learning model on the Data given.
+Our goal was to predict ##Number of Days until Payment## feature by training a Machine Learning model on the Data given.
 
 ## Approach used:
 ### Data Preprocessing:
