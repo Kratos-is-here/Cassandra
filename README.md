@@ -22,10 +22,10 @@ Our goal was to predict **Number of Days until Payment** feature by training a M
 4. Converted Dates into Date-Time Format: We noticed that dataset had various columns which corresponded to dates like Created, Invoice date etc. But these columns were in string format so we split them into day, date, weekday, month and year to improve inference.
 
 ### Feature Engineering:
-1. Due_Invoice_delta - difference between the due date and invoice date
-2. As the “Outstanding” column was mostly zero, we made a new feature called “Outstanding_zero” which was 1 if the column was zero and 0 otherwise.
-3. We had three continuous numerical columns : [“Outstanding:, “Amount”, “Settled”]. We took ratios of these three columns to create three new features.
-4. To utilize “Vendor_Name” features, we took mean, median, minimum, maximum, std-dev and count of numerical columns for each unique Vendor_Name and made these new features. These new features would help model learn about properties of vendors and how they affect the target.
+1. **Due_Invoice_delta** - difference between the due date and invoice date
+2. As the “Outstanding” column was mostly zero, we made a new feature called “**Outstanding_zero**” which was 1 if the column was zero and 0 otherwise.
+3. We had three continuous numerical columns : [**“Outstanding:, “Amount”, “Settled”**]. We took ratios of these three columns to create three new features.
+4. To utilize “Vendor_Name” features, we took **mean, median, minimum, maximum, std-dev and count of numerical columns** for each unique **Vendor_Name** and made these new features. These new features would help model learn about properties of vendors and how they affect the target.
 
 ### Training & Validation
 1. CatBoost is a high-performance algorithm for gradient boosting on decision trees.
