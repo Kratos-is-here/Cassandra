@@ -1,7 +1,7 @@
 # Cassandra
 
 ## The task was to build machine learning model that helps estimating when an invoice will be paid. The estimation doesn't have to be an exact date and time, a rough estimation in terms of days is sufficient for this task.
-
+## Data Description
 - Description : The textual description entered by the user during recording the invoice on the accounting system (string).
 - Vendor Name : The name of the vendor/supplier who provided the goods or services (string).
 - Created : The date and time of entering the invoice details on the accounting system (datetime).
