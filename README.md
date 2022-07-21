@@ -14,26 +14,47 @@
 
 Our goal was to predict **Number of Days until Payment** feature by training a Machine Learning model on the Data given.
 
-### Data Preprocessing:
+
+## Graphs and Insights derived from Exploratory Data Analysis (EDA) 
+
+![Pre Processing](https://github.com/eshaanagarwal/Cassandra/blob/main/stat1.png)
+- Most samples have amount less than 200 and 40-60 Number_of_days_until_payment
+- High amount implies fewer days till payment. 
+- Days till payment is less if invoice is generated on weekends.
+- Most days till payment if Invoice is generated in month of October and least if in July.
+
+![Pre Processing](https://github.com/eshaanagarwal/Cassandra/blob/main/stat2.png)
+
+- For most samples Due date is within 10 days of Invoice date.
+- Payment time is more if difference between Due and Invoice date is large.
+
+![Pre Processing](https://github.com/eshaanagarwal/Cassandra/blob/main/stat3.png)
+- Target is less than 50 for most samples.
+- Some unusual samples have negative target values. 
+
+
+
+
+## Data Preprocessing:
 ![Pre Processing](https://github.com/eshaanagarwal/Cassandra/blob/main/datapreprocessing.png)
 1. Replace Nan Values with Empty Strings in the Description
 2. Text Preprocessing on Description Text: list of stop list of 25 semantically non-selective words were taken from list used by Stanford NLP Group which are common in Reuters-RCV1.
 3. Count Vectorizer to numerically encode text features: It is great tool which is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text
 4. Converted Dates into Date-Time Format: We noticed that dataset had various columns which corresponded to dates like Created, Invoice date etc. But these columns were in string format so we split them into day, date, weekday, month and year to improve inference.
 
-### Feature Engineering
+## Feature Engineering
 1. **Due_Invoice_delta** - difference between the due date and invoice date
 2. As the “Outstanding” column was mostly zero, we made a new feature called “**Outstanding_zero**” which was 1 if the column was zero and 0 otherwise.
 3. We had three continuous numerical columns : [**“Outstanding:, “Amount”, “Settled”**]. We took ratios of these three columns to create three new features.
 4. To utilize “Vendor_Name” features, we took **mean, median, minimum, maximum, std-dev and count of numerical columns** for each unique **Vendor_Name** and made these new features. These new features would help model learn about properties of vendors and how they affect the target.
 
-### Training & Validation
+## Training & Validation
 1. CatBoost is a high-performance algorithm for gradient boosting on decision trees.
 2. Categorical features supported without any preprocessing
 3. Reduces overfitting when constructing your models with a novel gradient-boosting scheme.
 4. We used 5-Fold Cross Validation on our model to evaluate our model.
 
-### Other Approachers we tried
+## Other Approachers we tried
 1. Classical Neural Network with one hot encoding for the categorical features.
 2. Decision Trees
 3. StackingRegressor by stacking DecisionTree, XGB, CatBoost and RandomForest but CatBoost alone outperformed them.
@@ -42,3 +63,5 @@ Our goal was to predict **Number of Days until Payment** feature by training a M
 [Presentation slides explaining our approach](https://www.canva.com/design/DAE9kvzlI1c/FKcPR9OgjUXJzkgQlmdnLg/view?utm_content=DAE9kvzlI1c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 [Competition Link](https://www.kaggle.com/competitions/cassandra-udyam-2022/leaderboard)
+
+
