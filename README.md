@@ -15,6 +15,7 @@
 Our goal was to predict **Number of Days until Payment** feature by training a Machine Learning model on the Data given.
 
 ### Data Preprocessing:
+![Pre Processing](https://github.com/eshaanagarwal/Cassandra/blob/main/datapreprocessing.png)
 1. Replace Nan Values with Empty Strings in the Description
 2. Text Preprocessing on Description Text: list of stop list of 25 semantically non-selective words were taken from list used by Stanford NLP Group which are common in Reuters-RCV1.
 3. Count Vectorizer to numerically encode text features: It is great tool which is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text
